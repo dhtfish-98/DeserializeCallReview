@@ -1,0 +1,10 @@
+.venv/
+.install-check/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+validation-local/

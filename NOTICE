@@ -1,0 +1,13 @@
+DeserializeCallReview: new AI-assisted implementation, copyright 2026 contributors.
+
+Design source: PyCQA/Bandit, commit 68ebe11ef79263be27ec223184b94a4fc394a622.
+Selected original rule/AST sources carry these notices:
+Copyright 2014 Hewlett-Packard Development Company, L.P.
+Copyright 2016 Hewlett-Packard Development Company, L.P.
+Copyright (c) 2016 Rackspace, Inc.
+SPDX-License-Identifier: Apache-2.0
+
+The complete original Apache-2.0 license is retained unchanged.
+No upstream NOTICE file was present in the fixed source snapshot.
+Bandit runtime source is not packaged or imported by the new tool.
+Frozen source examples in tests/fixtures are parsed only, never executed.

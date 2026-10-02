@@ -1,0 +1,87 @@
+{
+  "upstream": "PyCQA/bandit",
+  "commit": "68ebe11ef79263be27ec223184b94a4fc394a622",
+  "license": "Apache-2.0",
+  "notice_file_in_snapshot": false,
+  "files": [
+    {
+      "path": "bandit/blacklists/calls.py",
+      "sha256": "40254e78109932bc4b328e042d46ee842b76428ad37147bdbf3a850d1d13d665",
+      "url": "https://github.com/PyCQA/bandit/blob/68ebe11ef79263be27ec223184b94a4fc394a622/bandit/blacklists/calls.py",
+      "reviewed": "complete selected B301/B302 docs, records and surrounding gen_blacklist implementation; other platform rules excluded",
+      "ranges": "1-55, executable gen_blacklist through return"
+    },
+    {
+      "path": "bandit/plugins/yaml_load.py",
+      "sha256": "6ce7c264139c49707700020d25bbaf70790779ba3eab2332038d79e4b827c768",
+      "url": "https://github.com/PyCQA/bandit/blob/68ebe11ef79263be27ec223184b94a4fc394a622/bandit/plugins/yaml_load.py",
+      "reviewed": "entire file"
+    },
+    {
+      "path": "bandit/cli/main.py",
+      "sha256": "5f614122b738a6507feae7ad454afa98de6a676ee5c9e15fb2f1599de735f3be",
+      "url": "https://github.com/PyCQA/bandit/blob/68ebe11ef79263be27ec223184b94a4fc394a622/bandit/cli/main.py",
+      "reviewed": "entire file; external plugin loader, target discovery, report output and baseline handling excluded"
+    },
+    {
+      "path": "bandit/core/node_visitor.py",
+      "sha256": "1ec4921372a72b12df4bfe7b84afd50e07c2b9de8bbe303fc6b699e7cacc99d8",
+      "url": "https://github.com/PyCQA/bandit/blob/68ebe11ef79263be27ec223184b94a4fc394a622/bandit/core/node_visitor.py",
+      "reviewed": "entire file; globally accumulated import aliases and explicit shadowing TODO noted"
+    },
+    {
+      "path": "bandit/core/context.py",
+      "sha256": "dbba8fa2070465c1dd4d5d81c869c1a49b28ecaafc6f039b939ae7ba71aaaceb",
+      "url": "https://github.com/PyCQA/bandit/blob/68ebe11ef79263be27ec223184b94a4fc394a622/bandit/core/context.py",
+      "reviewed": "entire file; Loader check reduces AST values to leaf attr/name strings"
+    },
+    {
+      "path": "bandit/core/tester.py",
+      "sha256": "d229bb23f1dad2239f32a52713aae1db713dbb75f8804c30ec2a7117a502696e",
+      "url": "https://github.com/PyCQA/bandit/blob/68ebe11ef79263be27ec223184b94a4fc394a622/bandit/core/tester.py",
+      "reviewed": "entire file; plugin execution/error/ignore handling excluded"
+    },
+    {
+      "path": "bandit/core/utils.py",
+      "sha256": "86483ddab8e9b989714a560988d3445d0dbf3add3bfb191ca158623717666de8",
+      "url": "https://github.com/PyCQA/bandit/blob/68ebe11ef79263be27ec223184b94a4fc394a622/bandit/core/utils.py",
+      "reviewed": "selected complete qualification helpers",
+      "ranges": "21-89"
+    },
+    {
+      "path": "tests/functional/test_functional.py",
+      "sha256": "9d5a2b7ec5ec7cf3140c5895c288a9ba8e662c22547039f36e6786e9bba8a882",
+      "url": "https://github.com/PyCQA/bandit/blob/68ebe11ef79263be27ec223184b94a4fc394a622/tests/functional/test_functional.py",
+      "reviewed": "complete selected pickle/shelve/yaml test methods and test harness imports, not unrelated platform tests",
+      "ranges": "1-30,317-323,333-339,504-510"
+    },
+    {
+      "path": "examples/pickle_deserialize.py",
+      "sha256": "5be9a3296802251d95854dd7d2059e0b9ca5b7fadbb1989ff2113918c2c7b106",
+      "url": "https://github.com/PyCQA/bandit/blob/68ebe11ef79263be27ec223184b94a4fc394a622/examples/pickle_deserialize.py",
+      "reviewed": "entire file, parsed as source only"
+    },
+    {
+      "path": "examples/yaml_load.py",
+      "sha256": "c2a880d76e7a15199674d494ee191b15386ac3c33151a0afdc99f206e7aec435",
+      "url": "https://github.com/PyCQA/bandit/blob/68ebe11ef79263be27ec223184b94a4fc394a622/examples/yaml_load.py",
+      "reviewed": "entire file, parsed as source only"
+    },
+    {
+      "path": "examples/shelve_open.py",
+      "sha256": "0396fbf06130467f84760b032460cd702b1d4ee2c38851c24d988447d44533da",
+      "url": "https://github.com/PyCQA/bandit/blob/68ebe11ef79263be27ec223184b94a4fc394a622/examples/shelve_open.py",
+      "reviewed": "entire file, parsed as source only"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+      "url": "https://github.com/PyCQA/bandit/blob/68ebe11ef79263be27ec223184b94a4fc394a622/LICENSE",
+      "reviewed": "entire exact Apache-2.0 license"
+    }
+  ],
+  "scope": "Independent selected pickle/_pickle/marshal/shelve/yaml AST call review, not the Bandit platform",
+  "reuse": "No Bandit runtime reused; three frozen source examples are test-only text fixtures",
+  "source_review_limit": "Selected complete rules and selected entry/AST/helper/test paths reviewed; unrelated rules/dependencies/platform tests not a full repository audit",
+  "ai_assistance": "New implementation, tests and documentation produced with Codex assistance; source/reference attribution retained"
+}
