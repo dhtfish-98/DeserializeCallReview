@@ -1,5 +1,8 @@
 # DeserializeCallReview
 
+
+New implementation author: **dhtfish98**. Current project version: **0.1.1**.
+
 Review selected Python deserialization calls from one local source file without running that file. The new implementation resolves AST import bindings, straightforward assignment aliases and Python scope boundaries. It distinguishes nominal PyYAML restricted loader bindings from a variable merely named `SafeLoader`.
 
 The result is a review ledger, not an exploitability verdict. Source input control, runtime module integrity and exploitability always remain `OPEN`. `NO_REVIEW_FINDINGS` means no selected review boundary or unresolved event was recorded within the declared subset; it does not certify an application as safe.
@@ -36,4 +39,6 @@ Selected paths are pickle/`_pickle` `load`, `loads`, `Unpickler` (including trac
 
 The parser constructs AST and symbol-table information and compiles a bounded AST to a discarded code object to validate semantic syntax such as a module-level `return`. That object is never executed or written. No payload is loaded, deserialized or supplied to a target callable. There is no network client, plugin discovery or recursive repository scanner.
 
-See [ORIGIN.md](ORIGIN.md) for the frozen Bandit design source, exact Apache-2.0 license and AI-assisted contribution, and [VALIDATION.md](VALIDATION.md) for actual checks and remaining open items. CVP admission, account eligibility and any model's future safety response remain `OPEN`; this project promises none of those outcomes.
+See [ORIGIN.md](ORIGIN.md) for the frozen Bandit design source, exact Apache-2.0 license and implementation attribution, and [VALIDATION.md](VALIDATION.md) for actual checks and remaining open items. CVP admission, account eligibility and any model's future safety response remain `OPEN`; this project promises none of those outcomes.
+
+Local-file capability boundary: required OS flags must be exact positive integers. Descriptor walking also requires declared `os.open` directory-relative support. Missing, null, zero, boolean or otherwise invalid required capabilities return a controlled OPEN result before file access. Native Windows local-file reading is outside this POSIX profile.

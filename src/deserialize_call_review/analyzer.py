@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-# New AI-assisted implementation; see ORIGIN.md. No Bandit runtime code reused.
+# New implementation by dhtfish98; see ORIGIN.md. No Bandit runtime code reused.
 """A bounded abstract interpreter for lexical import/call bindings, not execution.
 
 Only standard-library AST/symbol-table construction operates on input. No target

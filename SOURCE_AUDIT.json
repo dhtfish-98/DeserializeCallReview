@@ -83,5 +83,6 @@
   "scope": "Independent selected pickle/_pickle/marshal/shelve/yaml AST call review, not the Bandit platform",
   "reuse": "No Bandit runtime reused; three frozen source examples are test-only text fixtures",
   "source_review_limit": "Selected complete rules and selected entry/AST/helper/test paths reviewed; unrelated rules/dependencies/platform tests not a full repository audit",
-  "ai_assistance": "New implementation, tests and documentation produced with Codex assistance; source/reference attribution retained"
+  "implementation_attribution": "New implementation, tests and documentation produced under repository-owner direction; source/reference attribution retained",
+  "delivery_snapshot_note": "Local implementation/package observations in this record belong to the earlier delivery; current file digests and version are in SOURCE_REVIEW_MANIFEST.json. Upstream identities, hashes and review scope are retained."
 }

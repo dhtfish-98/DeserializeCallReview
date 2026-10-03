@@ -5,9 +5,16 @@ import stat
 
 
 def read_regular_file(path, limit):
-    if not all(hasattr(os, option) for option in ("O_NOFOLLOW", "O_DIRECTORY", "O_NONBLOCK")):
+    required = ("O_NOFOLLOW", "O_DIRECTORY", "O_NONBLOCK")
+    directory_capabilities = getattr(os, "supports_dir_fd", None)
+    directory_relative_open = (
+        isinstance(directory_capabilities, (set, frozenset)) and os.open in directory_capabilities
+    )
+    if os.name != "posix" or any(
+        type(getattr(os, flag, None)) is not int or getattr(os, flag) <= 0 for flag in required
+    ):
         raise ValueError("safe_open_unsupported")
-    if os.open not in os.supports_dir_fd:
+    if not directory_relative_open:
         raise ValueError("directory_relative_open_unsupported")
     name = os.fspath(path)
     if not isinstance(name, str) or not name or len(name) > 4096 or "\0" in name:

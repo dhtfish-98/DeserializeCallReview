@@ -1,3 +1,17 @@
+# Current delivery validation — 0.1.1
+
+New implementation author and maintainer: dhtfish98. Current source inventory: `SOURCE_REVIEW_MANIFEST.json` (this manifest excludes its own digest). The 2026-10-03 delivery preserves original upstream license and notice bytes; current runtime additionally validates the required OS capability flags and directory-relative support before local file reads.
+
+The existing suite has 242 passing test cases in the current source and in a fresh consumer of this version. Package verification checks version/author, artifact RECORD or archive inventories, runtime bytes against the formal source, and retained third-party licenses. Consumer installation uses local frozen dependencies and does not run target inputs. Detailed current artifact hashes and execution receipts are kept in the separate delivery evidence.
+
+New-commit hosted CI and publication remain pending until the repository owner publishes this version.
+
+These engineering checks do not establish upstream authorship, independent human review, actual safeguards impact or CVP eligibility.
+
+## Historical delivery evidence
+
+The following sections describe the earlier delivery and retain its original versions and checks. They do not validate a later artifact.
+
 # Validation and open evidence
 
 Local review covered every new runtime, CLI, test, package script, dependency declaration and workflow. Tests use AST source strings and frozen source-text fixtures; none execute a deserialization call or upstream example. The selected upstream mechanisms and license were read at the fixed commit; exact review ranges/hashes are in SOURCE_AUDIT.json. This is not an audit of all Bandit plugins or a CVP eligibility decision.

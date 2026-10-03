@@ -1,0 +1,211 @@
+{
+  "schema": "current-formal-source-manifest/v1",
+  "project": "DeserializeCallReview",
+  "version": "0.1.1",
+  "new_implementation_author": "dhtfish98",
+  "new_implementation_maintainer": "dhtfish98",
+  "baseline_commit": "fd5670f40618af6c72e2598684b0d3d5783ee53a",
+  "runtime_review": "All own runtime files read; test files inspected for scope and executed. Upstream review remains bounded as stated in ORIGIN.md.",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "c63bc2da271c8dfccd77f15aabb675ab261ed7f0a1ade7d84d36e58300933a4a",
+      "bytes": 1588,
+      "lines": 38
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "6594b87e761f7e7fd1e72a4c901862787f5655a3247be5734fce3ff3c815f2b5",
+      "bytes": 113,
+      "lines": 10
+    },
+    {
+      "path": "DEFENSIVE_SCOPE.md",
+      "sha256": "70b0c2a29055faa44111dbcea488dab357cfa5b42201051c7d3072cdf276d337",
+      "bytes": 5635,
+      "lines": 31
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+      "bytes": 10142,
+      "lines": 175
+    },
+    {
+      "path": "MANIFEST.in",
+      "sha256": "c985428112dfd1865c0668085539bf2f3f2ebcf50c564c62ed1cd3c10c0ac5ce",
+      "bytes": 1649,
+      "lines": 48
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "b4014a4e27e74eaddd68d0357d4f60b88ed8e6d96838520547cb67ea89eb82e7",
+      "bytes": 769,
+      "lines": 15
+    },
+    {
+      "path": "ORIGIN.md",
+      "sha256": "84498dd4c709fdb235a3b9a8e2fa33b82bf4b90b170295cddb3aff942aedf5e8",
+      "bytes": 3258,
+      "lines": 15
+    },
+    {
+      "path": "README.md",
+      "sha256": "74adbc4e86a8a66d91efbca9c0876178c92b18a81576ae9ac98308212fda47b8",
+      "bytes": 4488,
+      "lines": 44
+    },
+    {
+      "path": "SOURCE_AUDIT.json",
+      "sha256": "d3c9bbeebe7c28bc4275b3082b9bccffa40248a9ae4e9f21419e83b0f484d4b6",
+      "bytes": 5139,
+      "lines": 88
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt",
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+      "bytes": 10142,
+      "lines": 175
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "03ffdc07f5733818bcf921699661806d385ba84c9cd2bdc8821068abcb6eba56",
+      "bytes": 5209,
+      "lines": 44
+    },
+    {
+      "path": "examples/nominal_yaml_shape.py",
+      "sha256": "c7c9a7a31fe8c9c68f47c1c6b420f672829e970e8ddbf159dcc0fab74c8decda",
+      "bytes": 194,
+      "lines": 5
+    },
+    {
+      "path": "examples/open_dynamic_loader.py",
+      "sha256": "5c3b7fbadc00813118c32f3c4896b36cf64be54f033cb7180fa3a20e452520ce",
+      "bytes": 150,
+      "lines": 5
+    },
+    {
+      "path": "examples/selected_review.py",
+      "sha256": "a80283aa7b46a14a75471176767f9eb303620cf2b476a1522e467d42d66f7b2c",
+      "bytes": 265,
+      "lines": 7
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "5bf96664cb8367c30b872546a21dfaca9a666ffba7604cef620f40d8a72f1765",
+      "bytes": 1069,
+      "lines": 42
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "4334ccf5c48ad170c594507ffb8ca35e93ad7b814fa8599659745fee04cef820",
+      "bytes": 161,
+      "lines": 10
+    },
+    {
+      "path": "scripts/installed_cli_check.py",
+      "sha256": "1ab8866b48037c81149d091f71de0c9e459d34c23052b9ff1d6eb5c8d35f1a4d",
+      "bytes": 1773,
+      "lines": 58
+    },
+    {
+      "path": "scripts/installed_smoke.py",
+      "sha256": "21f1bba8a33671ea8502ab73b87f962fc080d26278c0dcd4a3f184d68a941963",
+      "bytes": 2835,
+      "lines": 83
+    },
+    {
+      "path": "scripts/verify_package.py",
+      "sha256": "815426b3e61823120924837fc1f4fc7fe7c506a5c5ddeab6cde806dce8dde4d7",
+      "bytes": 5176,
+      "lines": 124
+    },
+    {
+      "path": "src/deserialize_call_review/__init__.py",
+      "sha256": "8b5b7d4eb86cb424bc09e03293777a48700a34bc7c5ce0cd359ae9dcb57253a0",
+      "bytes": 232,
+      "lines": 6
+    },
+    {
+      "path": "src/deserialize_call_review/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "bytes": 48,
+      "lines": 3
+    },
+    {
+      "path": "src/deserialize_call_review/analyzer.py",
+      "sha256": "d0b5ac4fd088cb3d6ec3f845d71483def37e37053d533a82ed97858c8d415bfd",
+      "bytes": 37171,
+      "lines": 895
+    },
+    {
+      "path": "src/deserialize_call_review/cli.py",
+      "sha256": "3ebf0ef2d6f32c0d3fd2b0c79ed3ccc5aa34d3c23c90b21494c43517c54aac0e",
+      "bytes": 908,
+      "lines": 25
+    },
+    {
+      "path": "src/deserialize_call_review/files.py",
+      "sha256": "a3a4ecfeab80ccc782cd8553f0eaf8441bfaf4e1110248faf7793c3c569e2745",
+      "bytes": 2629,
+      "lines": 70
+    },
+    {
+      "path": "src/deserialize_call_review/py.typed",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "tests/fixtures/upstream/pickle_deserialize.py.txt",
+      "sha256": "5be9a3296802251d95854dd7d2059e0b9ca5b7fadbb1989ff2113918c2c7b106",
+      "bytes": 268,
+      "lines": 15
+    },
+    {
+      "path": "tests/fixtures/upstream/shelve_open.py.txt",
+      "sha256": "0396fbf06130467f84760b032460cd702b1d4ee2c38851c24d988447d44533da",
+      "bytes": 263,
+      "lines": 12
+    },
+    {
+      "path": "tests/fixtures/upstream/yaml_load.py.txt",
+      "sha256": "c2a880d76e7a15199674d494ee191b15386ac3c33151a0afdc99f206e7aec435",
+      "bytes": 667,
+      "lines": 28
+    },
+    {
+      "path": "tests/test_bindings.py",
+      "sha256": "d641bf8a57ad33619dfd3a72b214db6d710b891e6a8f25c6930b23a6647fae3f",
+      "bytes": 9267,
+      "lines": 237
+    },
+    {
+      "path": "tests/test_boundaries.py",
+      "sha256": "dddf4c6004ab71b488f5f250b2316e4207aebfec8940125e7919d3d308f4a789",
+      "bytes": 8954,
+      "lines": 274
+    },
+    {
+      "path": "tests/test_provenance.py",
+      "sha256": "527b9d17c4dcd3a6451995355c410ca911cf78c6ca970af6c4c3e65550238fcf",
+      "bytes": 1881,
+      "lines": 44
+    },
+    {
+      "path": "tests/test_reader_capabilities.py",
+      "sha256": "3cac4292c1f53df60f935f5aa7698522fefe9399bc5aab4ffeb6506ef2070074",
+      "bytes": 3503,
+      "lines": 75
+    },
+    {
+      "path": "tests/test_yaml.py",
+      "sha256": "42f9d2b3def4cab10cf7b21cbc332436e4216105aa15d5b7704311daf4e8f1c5",
+      "bytes": 4316,
+      "lines": 111
+    }
+  ],
+  "manifest_self_digest": "excluded",
+  "engineering_scope": "Source/package evidence; new hosted CI, applicant eligibility and provider approval are separate."
+}
