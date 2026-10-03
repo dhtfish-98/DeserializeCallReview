@@ -1,3 +1,5 @@
+> 目录已整理：文档在「项目文档」，构建、缓存与暂存输入在「Build」。从仓库根目录运行 `python3 构建.py --build`；如需使用本文原有源码命令，先运行 `python3 构建.py --stage --ci`，再进入 `Build/源码`。暂存会恢复原输入路径。现有版本和历史验证记录按各自提交理解。
+
 # DeserializeCallReview
 
 
@@ -35,10 +37,10 @@ Python 3.11 or newer is required. Runtime dependencies are limited to the Python
 
 An `OPEN` report can retain known `REVIEW` rows and `review_required=true`. `SAFE_CALL_SHAPE` only records a recognized nominal import/call form. It does not prove installed module origin, loader registry integrity, resource safety, execution, reachability or trusted input. Findings include one-based lines, zero-based UTF-8 byte columns and original byte offsets; they omit source excerpts, literal values, user-defined names, filenames and absolute paths. The source SHA-256 and positions are metadata and should be handled as such.
 
-Selected paths are pickle/`_pickle` `load`, `loads`, `Unpickler` (including tracked instance `.load`), marshal `load`/`loads`, shelve opening/Shelf constructors, and PyYAML load/safe/full/unsafe entry points. The exact set and limitations are in [DEFENSIVE_SCOPE.md](DEFENSIVE_SCOPE.md). Alias and scope behavior is deliberately conservative: late rebinding, wildcard/relative imports, dynamic calls, `global`/`nonlocal`, uncertain Loader values, mutation, unsupported scopes and branches remain explicit `OPEN` entries. This is not whole-program data flow, taint analysis or a full rewrite of the Bandit platform.
+Selected paths are pickle/`_pickle` `load`, `loads`, `Unpickler` (including tracked instance `.load`), marshal `load`/`loads`, shelve opening/Shelf constructors, and PyYAML load/safe/full/unsafe entry points. The exact set and limitations are in [DEFENSIVE_SCOPE.md](<DEFENSIVE_SCOPE.md>). Alias and scope behavior is deliberately conservative: late rebinding, wildcard/relative imports, dynamic calls, `global`/`nonlocal`, uncertain Loader values, mutation, unsupported scopes and branches remain explicit `OPEN` entries. This is not whole-program data flow, taint analysis or a full rewrite of the Bandit platform.
 
 The parser constructs AST and symbol-table information and compiles a bounded AST to a discarded code object to validate semantic syntax such as a module-level `return`. That object is never executed or written. No payload is loaded, deserialized or supplied to a target callable. There is no network client, plugin discovery or recursive repository scanner.
 
-See [ORIGIN.md](ORIGIN.md) for the frozen Bandit design source, exact Apache-2.0 license and implementation attribution, and [VALIDATION.md](VALIDATION.md) for actual checks and remaining open items. CVP admission, account eligibility and any model's future safety response remain `OPEN`; this project promises none of those outcomes.
+See [ORIGIN.md](<ORIGIN.md>) for the frozen Bandit design source, exact Apache-2.0 license and implementation attribution, and [VALIDATION.md](<VALIDATION.md>) for actual checks and remaining open items. CVP admission, account eligibility and any model's future safety response remain `OPEN`; this project promises none of those outcomes.
 
 Local-file capability boundary: required OS flags must be exact positive integers. Descriptor walking also requires declared `os.open` directory-relative support. Missing, null, zero, boolean or otherwise invalid required capabilities return a controlled OPEN result before file access. Native Windows local-file reading is outside this POSIX profile.

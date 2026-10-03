@@ -36,10 +36,18 @@ def verify(wheel, sdist):
         )
         require(
             set(metadata.get_all("License-File", []))
-            == {"LICENSE", "NOTICE", "THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt"},
+            == {
+                "项目文档/LICENSE",
+                "项目文档/NOTICE",
+                "THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt",
+            },
             "license-file metadata",
         )
-        for name in ("LICENSE", "NOTICE", "THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt"):
+        for name in (
+            "项目文档/LICENSE",
+            "项目文档/NOTICE",
+            "THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt",
+        ):
             require(package.read(f"{prefix}/licenses/{name}") == (root / name).read_bytes(), name)
         entry = package.read(f"{prefix}/entry_points.txt").decode()
         require("deserialize-call-review = deserialize_call_review.cli:main" in entry, "entrypoint")
@@ -82,13 +90,13 @@ def verify(wheel, sdist):
         base = members[0].name.split("/", 1)[0]
         names = {member.name for member in members}
         for name in (
-            "LICENSE",
-            "NOTICE",
+            "项目文档/LICENSE",
+            "项目文档/NOTICE",
             "THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt",
-            "README.md",
-            "ORIGIN.md",
-            "DEFENSIVE_SCOPE.md",
-            "VALIDATION.md",
+            "项目文档/README.md",
+            "项目文档/ORIGIN.md",
+            "项目文档/DEFENSIVE_SCOPE.md",
+            "项目文档/VALIDATION.md",
             "SOURCE_AUDIT.json",
             "requirements-dev.txt",
             ".github/workflows/ci.yml",

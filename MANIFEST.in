@@ -1,4 +1,4 @@
-include LICENSE NOTICE README.md ORIGIN.md DEFENSIVE_SCOPE.md VALIDATION.md SOURCE_AUDIT.json requirements-dev.txt
+include 项目文档/LICENSE 项目文档/NOTICE 项目文档/README.md 项目文档/ORIGIN.md 项目文档/DEFENSIVE_SCOPE.md 项目文档/VALIDATION.md SOURCE_AUDIT.json requirements-dev.txt
 recursive-include THIRD_PARTY_LICENSES *.txt
 recursive-include src *.py py.typed
 recursive-include tests *.py *.txt
@@ -15,15 +15,15 @@ prune build
 # Current formal source inventory, including provenance and tests.
 include .github/workflows/ci.yml
 include .gitignore
-include DEFENSIVE_SCOPE.md
-include LICENSE
-include NOTICE
-include ORIGIN.md
-include README.md
+include 项目文档/DEFENSIVE_SCOPE.md
+include 项目文档/LICENSE
+include 项目文档/NOTICE
+include 项目文档/ORIGIN.md
+include 项目文档/README.md
 include SOURCE_AUDIT.json
 include SOURCE_REVIEW_MANIFEST.json
 include THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt
-include VALIDATION.md
+include 项目文档/VALIDATION.md
 include examples/nominal_yaml_shape.py
 include examples/open_dynamic_loader.py
 include examples/selected_review.py
@@ -46,3 +46,18 @@ include tests/test_boundaries.py
 include tests/test_provenance.py
 include tests/test_reader_capabilities.py
 include tests/test_yaml.py
+
+# Directory layout: canonical docs and source build entry; generated trees are not sdist inputs.
+graft 项目文档
+include 构建.py 构建配置.json
+prune Build/源码
+prune Build/新构建
+prune Build/输出
+prune Build/环境
+prune Build/缓存
+prune Build/中间
+prune Build/临时
+global-exclude __pycache__ *.py[cod] .DS_Store
+
+# Original logical paths exist only in the staged compatibility view.
+include DEFENSIVE_SCOPE.md LICENSE NOTICE ORIGIN.md README.md VALIDATION.md
