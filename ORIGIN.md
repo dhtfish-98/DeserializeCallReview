@@ -2,7 +2,7 @@
 
 Design reference: [PyCQA/Bandit at 68ebe11ef79263be27ec223184b94a4fc394a622](https://github.com/PyCQA/bandit/tree/68ebe11ef79263be27ec223184b94a4fc394a622). The local fixed snapshot was used to read the selected B301/B302 records and full `gen_blacklist` executable body, complete B506 YAML rule, complete CLI entry and visitor/context/tester modules, selected complete call qualification helpers and selected functional test methods. The whole upstream repository and unrelated plugins/dependencies were not audited. Exact source hashes, review ranges and permalinks are in [SOURCE_AUDIT.json](SOURCE_AUDIT.json).
 
-The actual upstream license is **Apache-2.0**. The complete original license is retained byte-for-byte as `LICENSE` and `THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt` (SHA-256 `09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b`). Original selected-source copyright notices are retained in `NOTICE`. No upstream NOTICE file was present in this fixed snapshot. Three exact upstream example files are retained solely as `.py.txt` test fixtures with hash checks. They are never executed or imported and are excluded from the wheel's runtime package.
+The actual upstream license is **Apache-2.0**. The complete original license is retained byte-for-byte as `LICENSE` and `THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt` (SHA-256 `09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b`). NOTICE accurately records the actual redistributed Bandit examples; credits from unredistributed runtime-rule sources are omitted. No upstream NOTICE file was present in this fixed snapshot. Three exact upstream example files are retained solely as `.py.txt` test fixtures with hash checks. They are never executed or imported and are excluded from the wheel's runtime package.
 
 The runtime analyzer, file reader, CLI, report schema, tests and package verification scripts are new implementation by dhtfish98 produced under repository-owner direction. No Bandit runtime file is copied, imported or packaged as implementation. This attribution describes provenance and does not imply upstream endorsement or independent human authorship of generated code.
 
@@ -13,3 +13,7 @@ Behavior differs deliberately. Global and closure rebinding after a definition i
 Source-read evidence, local behavioral tests, built artifacts, remote CI execution and CVP eligibility are separate claims. Artifact metadata does not establish runtime exploitability or approval. CVP eligibility and any safety-classifier outcome remain OPEN.
 
 New implementation author: dhtfish98. This attribution applies to the new project implementation; original sources, licenses and third-party notices retain their authors. Automated checks do not establish independent human review or CVP eligibility.
+
+## Current distribution and reference boundary
+
+New runtime is distributed separately from three exact Bandit test-text fixtures. The fixtures retain their original Apache-2.0 license and fixed hashes and are included only in repository/sdist delivery. New implementation author and maintainer: dhtfish98. Source identities and bounded research facts above remain provenance, not an assertion that those authors wrote or endorsed the new runtime.

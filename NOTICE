@@ -1,15 +1,13 @@
-DeserializeCallReview: new implementation by dhtfish98, copyright 2026 contributors.
+DeserializeCallReview 0.1.2
+Copyright 2026 dhtfish98. New runtime, CLI, tests and documentation author: dhtfish98.
+New source is licensed under Apache-2.0 in LICENSE.
 
-Design source: PyCQA/Bandit, commit 68ebe11ef79263be27ec223184b94a4fc394a622.
-Selected original rule/AST sources carry these notices:
-Copyright 2014 Hewlett-Packard Development Company, L.P.
-Copyright 2016 Hewlett-Packard Development Company, L.P.
-Copyright (c) 2016 Rackspace, Inc.
-SPDX-License-Identifier: Apache-2.0
-
-The complete original Apache-2.0 license is retained unchanged.
-No upstream NOTICE file was present in the fixed source snapshot.
-Bandit runtime source is not packaged or imported by the new tool.
-Frozen source examples in tests/fixtures are parsed only, never executed.
-
-New implementation copyright 2026 dhtfish98. Original upstream notices above are retained.
+Three exact PyCQA/Bandit example sources from fixed commit
+68ebe11ef79263be27ec223184b94a4fc394a622 are redistributed as test-only text in
+tests/fixtures/upstream/: pickle_deserialize.py.txt, shelve_open.py.txt and
+yaml_load.py.txt. They remain original third-party material, never imported or
+executed. Their complete Apache-2.0 terms are retained in
+THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt. No upstream NOTICE file existed in
+the fixed snapshot. No Bandit runtime implementation is copied or imported.
+The wheel excludes these fixtures; the repository and sdist include them.
+No upstream endorsement, unaided human authorship or CVP approval is asserted.

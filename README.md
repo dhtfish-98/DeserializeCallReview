@@ -1,7 +1,7 @@
 # DeserializeCallReview
 
 
-New implementation author: **dhtfish98**. Current project version: **0.1.1**.
+New implementation author: **dhtfish98**. Current project version: **0.1.2**.
 
 Review selected Python deserialization calls from one local source file without running that file. The new implementation resolves AST import bindings, straightforward assignment aliases and Python scope boundaries. It distinguishes nominal PyYAML restricted loader bindings from a variable merely named `SafeLoader`.
 

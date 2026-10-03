@@ -44,5 +44,5 @@ include tests/fixtures/upstream/yaml_load.py.txt
 include tests/test_bindings.py
 include tests/test_boundaries.py
 include tests/test_provenance.py
-include tests/test_yaml.py
 include tests/test_reader_capabilities.py
+include tests/test_yaml.py

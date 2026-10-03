@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "deserialize-call-review"
-version = "0.1.1"
+version = "0.1.2"
 description = "Bounded offline Python AST review of selected deserialization calls"
 readme = "README.md"
 requires-python = ">=3.11"
