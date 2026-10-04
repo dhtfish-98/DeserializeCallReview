@@ -39,14 +39,14 @@ def verify(wheel, sdist):
             == {
                 "项目文档/LICENSE",
                 "项目文档/NOTICE",
-                "THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt",
+                "项目文档/THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt",
             },
             "license-file metadata",
         )
         for name in (
             "项目文档/LICENSE",
             "项目文档/NOTICE",
-            "THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt",
+            "项目文档/THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt",
         ):
             require(package.read(f"{prefix}/licenses/{name}") == (root / name).read_bytes(), name)
         entry = package.read(f"{prefix}/entry_points.txt").decode()
@@ -92,12 +92,12 @@ def verify(wheel, sdist):
         for name in (
             "项目文档/LICENSE",
             "项目文档/NOTICE",
-            "THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt",
+            "项目文档/THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt",
             "项目文档/README.md",
             "项目文档/ORIGIN.md",
             "项目文档/DEFENSIVE_SCOPE.md",
             "项目文档/VALIDATION.md",
-            "SOURCE_AUDIT.json",
+            "项目文档/SOURCE_AUDIT.json",
             "requirements-dev.txt",
             ".github/workflows/ci.yml",
             "scripts/verify_package.py",

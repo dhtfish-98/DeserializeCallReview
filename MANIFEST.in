@@ -1,5 +1,5 @@
-include 项目文档/LICENSE 项目文档/NOTICE 项目文档/README.md 项目文档/ORIGIN.md 项目文档/DEFENSIVE_SCOPE.md 项目文档/VALIDATION.md SOURCE_AUDIT.json requirements-dev.txt
-recursive-include THIRD_PARTY_LICENSES *.txt
+include 项目文档/LICENSE 项目文档/NOTICE 项目文档/README.md 项目文档/ORIGIN.md 项目文档/DEFENSIVE_SCOPE.md 项目文档/VALIDATION.md 项目文档/SOURCE_AUDIT.json requirements-dev.txt
+recursive-include 项目文档/THIRD_PARTY_LICENSES *.txt
 recursive-include src *.py py.typed
 recursive-include tests *.py *.txt
 recursive-include examples *.py
@@ -20,9 +20,9 @@ include 项目文档/LICENSE
 include 项目文档/NOTICE
 include 项目文档/ORIGIN.md
 include 项目文档/README.md
-include SOURCE_AUDIT.json
+include 项目文档/SOURCE_AUDIT.json
 include SOURCE_REVIEW_MANIFEST.json
-include THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt
+include 项目文档/THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt
 include 项目文档/VALIDATION.md
 include examples/nominal_yaml_shape.py
 include examples/open_dynamic_loader.py

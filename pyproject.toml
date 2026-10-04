@@ -9,7 +9,7 @@ description = "Bounded offline Python AST review of selected deserialization cal
 readme = "项目文档/README.md"
 requires-python = ">=3.11"
 license = "Apache-2.0"
-license-files = ["项目文档/LICENSE", "项目文档/NOTICE", "THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt"]
+license-files = ["项目文档/LICENSE", "项目文档/NOTICE", "项目文档/THIRD_PARTY_LICENSES/Bandit-Apache-2.0.txt"]
 authors = [{name = "dhtfish98"}]
 maintainers = [{name = "dhtfish98"}]
 dependencies = []

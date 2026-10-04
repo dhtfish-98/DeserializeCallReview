@@ -7,7 +7,7 @@ import pytest
 from deserialize_call_review import review_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = json.loads((ROOT / "SOURCE_AUDIT.json").read_text())
+MANIFEST = json.loads((ROOT / "项目文档/SOURCE_AUDIT.json").read_text())
 
 
 @pytest.mark.parametrize("name", ["pickle_deserialize", "yaml_load", "shelve_open"])
@@ -36,7 +36,9 @@ def test_frozen_upstream_source_examples_hash_and_selected_ledger(name):
 
 def test_complete_original_license_copies_are_exact():
     original = (ROOT / "LICENSE").read_bytes()
-    assert original == (ROOT / "THIRD_PARTY_LICENSES" / "Bandit-Apache-2.0.txt").read_bytes()
+    assert (
+        original == (ROOT / "项目文档/THIRD_PARTY_LICENSES" / "Bandit-Apache-2.0.txt").read_bytes()
+    )
     record = next(item for item in MANIFEST["files"] if item["path"] == "LICENSE")
     assert hashlib.sha256(original).hexdigest() == record["sha256"]
     assert b"Apache License" in original
